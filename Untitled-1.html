@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Kỉ yếu lớp 12A6</title>
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  
+  <!-- Swiper CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+    }
+
+    .sidebar {
+      position: fixed;
+      width: 220px;
+      height: 100%;
+      background: linear-gradient(135deg, #fefae0, #f8f4e3);
+      color: #333;
+      padding: 20px;
+      box-shadow: 2px 0 10px rgba(0, 0, 0, 0.1);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+
+    .sidebar img {
+      width: 100px;
+      border-radius: 50%;
+      margin-bottom: 15px;
+      border: 2px solid #ccc;
+    }
+
+    .sidebar h2 {
+      margin-top: 0;
+      font-size: 22px;
+      margin-bottom: 20px;
+      color: #444;
+    }
+
+    .sidebar a {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      color: #333;
+      text-decoration: none;
+      padding: 10px;
+      width: 100%;
+      border-radius: 8px;
+      transition: background 0.3s;
+    }
+
+    .sidebar a:hover {
+      background-color: rgba(0, 0, 0, 0.05);
+    }
+
+    .main {
+      margin-left: 220px;
+      min-height: 100vh;
+      background: url('https://scontent.fsgn2-9.fna.fbcdn.net/v/t1.15752-9/487366524_1181716403699469_4056628742818017812_n.jpg?_nc_cat=106&ccb=1-7&_nc_sid=9f807c&_nc_eui2=AeGLKw6w5KVqt9-KAu0rhuTnU5X6UCWpkVFTlfpQJamRUbw1ZcXOO5fExVl6vDzFh2CKF8VcyqxjgTpZ1LZeTvIJ&_nc_ohc=nNnTV_ZsjvYQ7kNvwGfTSlX&_nc_oc=AdlRbVLQMkqw_O3ZRaWBIbShhWBvYmbt3J0_VoqrEzNF50pyZ9bxxSEqAFrK8kVOT9U&_nc_zt=23&_nc_ht=scontent.fsgn2-9.fna&oh=03_Q7cD2AGECDB8Ngc4r2w7_ImbVikp_zduVLIki-8ZXRBrdnU2RA&oe=681C5CEA') no-repeat center center/cover;
+      color: white;
+      position: relative;
+    }
+
+    .overlay {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background-color: rgba(0, 0, 0, 0.4);
+      z-index: 0;
+    }
+
+    .content {
+      z-index: 1;
+      position: relative;
+      padding: 50px 20px;
+      text-align: center;
+    }
+
+    .main h1 {
+      font-size: 50px;
+      margin: 0;
+    }
+
+    .main h2 {
+      margin: 10px 0;
+    }
+
+    .main h3 {
+      font-weight: normal;
+      font-style: italic;
+      max-width: 600px;
+      margin: 0 auto 40px;
+    }
+
+    /* Slide thành viên */
+    .swiper {
+      width: 90%;
+      max-width: 800px;
+      padding-bottom: 50px;
+    }
+
+    .swiper-slide {
+      background-color: rgba(255, 255, 255, 0.2);
+      backdrop-filter: blur(5px);
+      border-radius: 15px;
+      padding: 20px;
+      text-align: center;
+    }
+
+    .swiper-slide img {
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+      border: 3px solid white;
+      margin-bottom: 10px;
+    }
+
+    .swiper-slide h4 {
+      font-size: 24px;
+      margin: 10px 0 5px;
+    }
+
+    .swiper-slide p {
+      font-size: 16px;
+      font-style: italic;
+    }
+
+    .slide-title {
+      margin-top: 60px;
+      font-size: 28px;
+      color: #fff;
+      text-shadow: 1px 1px 3px #000;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="sidebar">
+    <img src="https://pvdong.khanhhoa.edu.vn/upload/44008/20180906/logoPVD.png" alt="Logo" />
+    <h2>4 Chàng Xếp Xe</h2>
+    <a href="#"><i class="fas fa-home"></i> Trang chủ</a>
+    <a href="#thanhvien"><i class="fas fa-users"></i> Thành viên nhóm</a>
+    <a href="#"><i class="fas fa-id-card"></i> Thông tin cá nhân</a>
+  </div>
+
+  <div class="main">
+    <div class="overlay"></div>
+    <div class="content">
+      <h1>Kỉ yếu lớp 12A6</h1>
+      <h2>Niên khóa 2022 - 2025</h2>
+      <h3>Một hành trình thanh xuân tuyệt đẹp, lưu giữ từng khoảnh khắc của tuổi học trò.</h3>
+
+      <!-- Slide thành viên nhóm -->
+      <h2 class="slide-title" id="thanhvien">Thành viên nhóm</h2>
+      <div class="swiper mySwiper">
+        <div class="swiper-wrapper">
+          <!-- Thành viên 1 -->
+          <div class="swiper-slide">
+            <img src="https://via.placeholder.com/150" alt="Nguyễn Văn A">
+            <h4>Nguyễn Văn A</h4>
+            <p>Biệt danh: A cool</p>
+          </div>
+
+          <!-- Thành viên 2 -->
+          <div class="swiper-slide">
+            <img src="https://via.placeholder.com/150" alt="Trần Thị B">
+            <h4>Trần Thị B</h4>
+            <p>Biệt danh: B dễ thương</p>
+          </div>
+
+          <!-- Thành viên 3 -->
+          <div class="swiper-slide">
+            <img src="https://via.placeholder.com/150" alt="Lê Văn C">
+            <h4>Lê Văn C</h4>
+            <p>Biệt danh: C học giỏi</p>
+          </div>
+
+          <!-- Thành viên 4 -->
+          <div class="swiper-slide">
+            <img src="https://via.placeholder.com/150" alt="Phạm Thị D">
+            <h4>Phạm Thị D</h4>
+            <p>Biệt danh: D ca hát</p>
+          </div>
+        </div>
+        <!-- Pagination (chấm tròn) -->
+        <div class="swiper-pagination"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Swiper JS -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <script>
+    const swiper = new Swiper('.mySwiper', {
+      loop: true,
+      pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
+      },
+    });
+  </script>
+</body>
+</html>
